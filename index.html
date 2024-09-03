@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опросник</title>
+
+    <style>
+      /* Styling the Body element 
+        i.e. Color, Font, Alignment */
+      body {
+        background-color: #c405b1;
+        font-family: Verdana;
+        text-align: center;
+      }
+
+      /* Styling the Form (Color, Padding, Shadow) */
+      form {
+        background-color: #fff;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Styling form-control Class */
+      .form-control {
+        text-align: left;
+        margin-bottom: 25px;
+      }
+
+      /* Styling form-control Label */
+      .form-control label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      /* Styling form-control input, 
+        select, textarea */
+      .form-control input,
+      .form-control select,
+      .form-control textarea {
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        padding: 10px;
+        display: block;
+        width: 95%;
+      }
+
+      /* Styling form-control Radio 
+        button and Checkbox */
+      .form-control input[type="radio"],
+      .form-control input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+      }
+
+      /* Styling Button */
+      button {
+        background-color: #e415d0;
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        font-size: 21px;
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Опрос студентов университета</h1>
+
+    <!-- Create Form -->
+    <form id="form" action="http://localhost:3000/submit-form" method="post">
+      <!-- Details -->
+      <div class="form-control">
+        <label for="name" id="label-name"> Имя </label>
+
+        <!-- Input Type Text -->
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Введите своё имя"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="email" id="label-email"> Email </label>
+
+        <!-- Input Type Email-->
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Введите свой email"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="age" id="label-age"> Возраст </label>
+
+        <!-- Input Type Text -->
+        <input
+          type="text"
+          id="age"
+          name="age"
+          placeholder="Введите свой возраст"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="aktiv" id="label-aktiv"> Прошлое учебное заведение </label>
+
+        <!-- Input Type Text -->
+        <input
+          type="text"
+          id="aktiv"
+          name="aktiv"
+          placeholder="Введите название вашего прошлого учебного заведения"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="group" id="label-group">
+          Номер вашей академической группы
+        </label>
+
+        <!-- Input Type Text-->
+        <input
+          type="text"
+          id="group"
+          name="group"
+          placeholder="Введите номер вашей группы"
+          required
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="role" id="label-role">
+          На какой форме обучения вы учитесь
+        </label>
+
+        <!-- Dropdown options -->
+        <select name="role" id="role" required>
+          <option value="bak">Бакалавриат</option>
+          <option value="mag">Магистратура</option>
+          <option value="spec">Специалитет</option>
+          <option value="asp">Аспирантура</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label> Вам нравится обучение в своём университете? </label>
+
+        <!-- Input Type Radio Button -->
+        <label for="recommed-1">
+          <input
+            type="radio"
+            id="recommed-1"
+            name="recommed"
+            value="Да"
+            required
+          />Да
+        </label>
+        <label for="recommed-2">
+          <input type="radio" id="recommed-2" name="recommed" value="Нет" />Нет
+        </label>
+        <label for="recommed-3">
+          <input
+            type="radio"
+            id="recommed-3"
+            name="recommed"
+            value="Не могу ответить"
+          />Не могу ответить
+        </label>
+      </div>
+
+      <div class="form-control">
+        <label
+          >Какие языки программирования и фреймворки вы используете?
+        </label>
+        <!-- Input Type Checkbox -->
+        <label for="inp-1">
+          <input type="checkbox" id="inp-1" name="inp" value="C" />C
+        </label>
+        <label for="inp-2">
+          <input type="checkbox" id="inp-2" name="inp" value="C++" />C++
+        </label>
+        <label for="inp-3">
+          <input type="checkbox" id="inp-3" name="inp" value="C#" />C#
+        </label>
+        <label for="inp-4">
+          <input type="checkbox" id="inp-4" name="inp" value="Java" />Java
+        </label>
+        <label for="inp-5">
+          <input type="checkbox" id="inp-5" name="inp" value="Python" />Python
+        </label>
+        <label for="inp-6">
+          <input
+            type="checkbox"
+            id="inp-6"
+            name="inp"
+            value="JavaScript"
+          />JavaScript
+        </label>
+        <label for="inp-7">
+          <input type="checkbox" id="inp-7" name="inp" value="React" />React
+        </label>
+        <label for="inp-8">
+          <input type="checkbox" id="inp-8" name="inp" value="Next.JS" />Next.JS
+        </label>
+        <label for="inp-9">
+          <input type="checkbox" id="inp-9" name="inp" value="Django" />Django
+        </label>
+        <label for="inp-10">
+          <input type="checkbox" id="inp-10" name="inp" value="Spring" />Spring
+        </label>
+      </div>
+
+      <div class="form-control">
+        <label for="comment"> Поле для свободных мыслей </label>
+
+        <!-- multi-line text input control -->
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="Введите ваши комментарии здесь"
+          required
+        >
+        </textarea>
+      </div>
+
+      <!-- Multi-line Text Input Control -->
+      <button type="submit" value="submit">Отправить</button>
+    </form>
+  </body>
+</html>
